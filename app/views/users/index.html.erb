@@ -1,5 +1,8 @@
 <h1>メッセージ一覧</h1>
 <p><%= link_to "投稿画面へ", new_user_path %></p>
 <% @users.each do |user| %>
-  <p><%= user.title %></p>
+  <p>
+    <%= user.title %>
+    <%= link_to "詳細", user_path(user.id), method: :get %> 
+  </p>
 <% end %>
