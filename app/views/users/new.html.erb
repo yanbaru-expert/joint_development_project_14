@@ -1,7 +1,18 @@
-<h1>メッセージ作成</h1>
-<%= form_for @user , url: users_path, html: { method: :post} do |f| %>
-  <p>タイトル<%= f.text_field :title %></p>
-  <p>内容<%= f.text_field :content %></p>
-  <input type="submit" value="送信" >
-<% end %>
-<%= link_to "一覧画面へ", users_path %>
+<h1>ユーザー作成</h1>
+  <%= form_with model:@user ,local: true do |f| %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="text1a">名前</span>
+      </div>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="text1a">年齢</span>
+      </div>
+        <%= f.text_field :age, class:"form-control" %>
+    </div>
+    <input type="submit" class="btn btn-primary full-button" value="送信" >
+  <% end %>
+<hr>
+<%= link_to "一覧画面へ", users_path ,class:"btn btn-info full-button"%>
