@@ -1,0 +1,19 @@
+<h1>ユーザー詳細</h1>
+<div class="card">
+  <div class="card-header">
+    名前
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.name %></h5>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    年齢
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.age %></h5>
+  </div>
+</div>
+<hr>
+<%= link_to "一覧画面へ", users_path, class:"btn btn-info full-button" %>
