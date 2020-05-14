@@ -1,0 +1,18 @@
+<h1>ユーザー編集</h1>
+  <%= form_for @user , url: user_path, html: { method: :patch} do |f| %>
+    <div class="input-group mb-3 ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="text1a">名前</span>
+      </div>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+    <div class="input-group mb-3 ">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="text1a">年齢</span>
+      </div>
+        <%= f.text_field :age, class:"form-control" %>
+    </div>
+    <input type="submit" class="btn btn-primary full-button" value="送信" >
+  <% end %>
+<hr>
+<%= link_to "一覧画面へ", users_path ,class:"btn btn-info full-button"%>
